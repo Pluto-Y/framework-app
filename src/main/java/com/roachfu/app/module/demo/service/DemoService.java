@@ -21,7 +21,7 @@ public interface DemoService {
      * @param id
      * @return
      */
-    DemoInfoVo getDemoInfoById(String id);
+    DemoInfoVo getDemoInfoById(Long id);
 
     /**
      * 根据id更新demo
@@ -35,7 +35,7 @@ public interface DemoService {
      * @param id
      * @return
      */
-    int deleteDemoById(String id);
+    int deleteDemoById(Long id);
 
     /**
      * 新增一条demo记录

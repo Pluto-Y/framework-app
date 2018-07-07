@@ -18,26 +18,26 @@
             demo_value,
             create_time
         from
-            t_demo
+            tb_demo
 
     </select>
 
     <!-- 获取详情 -->
-    <select id="getInfoById" parameterType="string" resultMap="DemoMap">
+    <select id="getInfoById" parameterType="long" resultMap="DemoMap">
         select
             id,
             demo_name,
             demo_value,
             create_time
         from
-            t_demo
+            tb_demo
         where
             id = #{id,jdbcType=VARCHAR}
         and demo_status = 1
     </select>
 
     <insert id="insert" parameterType="Demo">
-        insert into t_demo (id, demo_name, demo_value,
+        insert into tb_demo (id, demo_name, demo_value,
         demo_status, update_time, create_time)
         values (#{id,jdbcType=VARCHAR}, #{demoName,jdbcType=VARCHAR}, #{demoValue,jdbcType=TINYINT},
         #{demoStatus,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP})
@@ -47,7 +47,7 @@
         根据id更新demo
     -->
     <update id="updateById" parameterType="Demo">
-        update t_demo
+        update tb_demo
         <set>
             <if test="demoName != null">
                 demo_name = #{demoName,jdbcType=VARCHAR},
@@ -66,8 +66,8 @@
     <!--
         根据id逻辑删除记录
     -->
-    <update id="deleteById" parameterType="string">
-        update t_demo set demo_status = 0 where id = #{id,jdbcType=VARCHAR}
+    <update id="deleteById" parameterType="long">
+        update tb_demo set demo_status = 0 where id = #{id,jdbcType=VARCHAR}
     </update>
 
 </mapper>

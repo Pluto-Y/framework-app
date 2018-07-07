@@ -36,7 +36,7 @@ public class DemoController extends BaseController{
     }
 
     @GetMapping(value = "/{id}")
-    public APIResponse info(@PathVariable("id") String id) {
+    public APIResponse info(@PathVariable("id") Long id) {
         DemoInfoVo demoInfo = demoService.getDemoInfoById(id);
         return new APIResponse(demoInfo);
     }
@@ -52,7 +52,7 @@ public class DemoController extends BaseController{
     }
 
     @DeleteMapping(value = "/{id}")
-    public APIResponse delete(@PathVariable("id") String id) {
+    public APIResponse delete(@PathVariable("id") Long id) {
         int flag = demoService.deleteDemoById(id);
         if(flag < 1){
             Meta meta = new Meta(50010001, "删除失败");
@@ -62,7 +62,7 @@ public class DemoController extends BaseController{
     }
 
     @PutMapping(value = "/{id}")
-    public APIResponse update(@PathVariable("id") String id, @RequestBody DemoUpdateDTO demoUpdate) {
+    public APIResponse update(@PathVariable("id") Long id, @RequestBody DemoUpdateDTO demoUpdate) {
         demoUpdate.setId(id);
 
         int flag = demoService.updateDemoById(demoUpdate);

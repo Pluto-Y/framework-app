@@ -1,6 +1,9 @@
 package com.roachfu.app.module.demo.pojo.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.roachfu.app.module.base.pojo.vo.BaseVO;
+import lombok.Data;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -8,47 +11,19 @@ import java.util.Date;
  * @author fuqiang
  * @time 2017/3/1 0:35
  */
+
+@Data
 public class DemoInfoVo extends BaseVO {
 
     private static final long serialVersionUID = -7315927016100229138L;
 
-    private String id;
+    private Long id;
 
     private String demoName;
 
-    private Integer demoValue;
+    private String demoValue;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getDemoName() {
-        return demoName;
-    }
-
-    public void setDemoName(String demoName) {
-        this.demoName = demoName;
-    }
-
-    public Integer getDemoValue() {
-        return demoValue;
-    }
-
-    public void setDemoValue(Integer demoValue) {
-        this.demoValue = demoValue;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 }

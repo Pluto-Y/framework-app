@@ -51,7 +51,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public DemoInfoVo getDemoInfoById(String id) {
+    public DemoInfoVo getDemoInfoById(Long id) {
         Demo demo = demoDao.getInfoById(id);
         DemoInfoVo vo = null;
         if (demo != null) {
@@ -72,7 +72,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public int deleteDemoById(String id) {
+    public int deleteDemoById(Long id) {
         return demoDao.deleteById(id);
     }
 

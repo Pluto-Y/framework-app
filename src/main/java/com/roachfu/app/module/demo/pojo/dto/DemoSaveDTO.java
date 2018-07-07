@@ -1,5 +1,8 @@
 package com.roachfu.app.module.demo.pojo.dto;
 
+import lombok.Data;
+import lombok.ToString;
+
 import java.io.Serializable;
 
 /**
@@ -7,32 +10,15 @@ import java.io.Serializable;
  * @author fuqiang
  * @time 2017/2/27 23:11
  */
+
+@Data
+@ToString
 public class DemoSaveDTO implements Serializable {
 
     private static final long serialVersionUID = -6858772562134176280L;
 
     private String demoName;
 
-    private Integer demoValue;
+    private String demoValue;
 
-    public String getDemoName() {
-        return demoName;
-    }
-
-    public void setDemoName(String demoName) {
-        this.demoName = demoName;
-    }
-
-    public Integer getDemoValue() {
-        return demoValue;
-    }
-
-    public void setDemoValue(Integer demoValue) {
-        this.demoValue = demoValue;
-    }
-
-    @Override
-    public String toString() {
-        return org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(this);
-    }
 }

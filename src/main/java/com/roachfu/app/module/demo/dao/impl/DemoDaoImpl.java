@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public class DemoDaoImpl extends BaseDaoImpl<Demo, String> implements DemoDao {
+public class DemoDaoImpl extends BaseDaoImpl<Demo, Long> implements DemoDao {
 
 }
