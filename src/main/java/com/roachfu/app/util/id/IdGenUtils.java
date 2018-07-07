@@ -19,7 +19,7 @@ public class IdGenUtils {
 
     private final long workerId;
     /** 时间起始标记点，作为基准，一般取系统的最近时间 */
-    private static final long EPOCH = 1403_854_494_756L;
+    private static final long EPOCH = 1530_958_262_854L;
     /** 机器标识位数 */
     private static final long WORKER_ID_BITS = 10L;
     /** 机器ID最大值: 1023 */
@@ -106,9 +106,5 @@ public class IdGenUtils {
             log.error("un know host exception. . . ", e);
             return 1;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(IdGenUtils.getFlowIdWorkerInstance().nextId());
     }
 }
