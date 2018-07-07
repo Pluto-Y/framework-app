@@ -15,5 +15,4 @@
 
 ## 项目结构图
 
-![framework-app(1).png](http://upload-images.jianshu.io/upload_images/1886857-1408283cac8d2001.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+[百度脑图](http://naotu.baidu.com/file/38b33edcc36ad479abb9d0246fbd65c0)
